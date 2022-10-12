@@ -167,9 +167,6 @@ class Package implements IPackage
      */
     public function setDepoCode($depoCode)
     {
-        if ($depoCode !== null && ! in_array($depoCode, Depo::$list)) {
-            throw new WrongDataException(sprintf('$depoCode has wrong value, only %s are allowed', implode(', ', Depo::$list)));
-        }
         $this->depoCode = $depoCode;
     }
 
